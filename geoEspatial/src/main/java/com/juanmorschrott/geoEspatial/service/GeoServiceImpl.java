@@ -1,7 +1,6 @@
 package com.juanmorschrott.geoEspatial.service;
 
 import com.juanmorschrott.geoEspatial.model.City;
-import com.juanmorschrott.geoEspatial.model.Point;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -53,12 +52,6 @@ public class GeoServiceImpl implements GeoService {
             s.close();
             conn.close();
         }
-    }
-
-    @Override
-    public City searchClosestCity(Point point) {
-
-        return new City();
     }
 
     private void connect() throws SQLException {
