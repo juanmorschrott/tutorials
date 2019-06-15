@@ -3,18 +3,17 @@ package com.juanmorschrott.geoEspatial.service;
 import com.juanmorschrott.geoEspatial.model.City;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.sql.*;
 
-@Service
+@Component
 public class GeoServiceImpl implements GeoService {
 
     Logger logger = LoggerFactory.getLogger(GeoServiceImpl.class);
 
     private Connection conn;
     private Statement s;
-    private ResultSet r;
 
     @Override
     public void insertCity(City city) throws SQLException {
