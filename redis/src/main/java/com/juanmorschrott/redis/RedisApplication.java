@@ -42,6 +42,6 @@ public class RedisApplication implements ApplicationRunner {
 
 		Optional<Student> searchResult = studentRepository.findByName("Gabriel");
 
-		System.out.println(searchResult.isPresent() ? searchResult : "Student not found");
+		System.out.println(searchResult.isPresent() ? searchResult.get().toString() : "Student not found");
 	}
 }
