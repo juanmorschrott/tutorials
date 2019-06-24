@@ -27,7 +27,6 @@ public class RedisApplication implements ApplicationRunner {
 		studentRepository.deleteAll();
 
 		Student s1 = new Student();
-		s1.setId("1");
 		s1.setName("Gabriel");
 		Evaluation e1 = new Evaluation();
 		e1.setImprove("Tiene muchas dificultades");
@@ -35,14 +34,13 @@ public class RedisApplication implements ApplicationRunner {
 		studentRepository.save(s1);
 
 		Student s2 = new Student();
-		s2.setId("2");
 		s2.setName("Eric");
 		Evaluation e2 = new Evaluation();
 		e2.setImprove("No tiene interes por trabajar");
 		s2.setEvaluation(e2);
 		studentRepository.save(s2);
 
-		Optional<Student> searchResult = studentRepository.findById("1");
+		Optional<Student> searchResult = studentRepository.findByName("Gabriel");
 
 		System.out.println(searchResult.isPresent() ? searchResult : "Student not found");
 	}
