@@ -38,8 +38,7 @@ public class BatchConfiguration {
         return new FlatFileItemReaderBuilder<Hotel>()
                 .name("hotelItemReader")
                 .resource(new ClassPathResource("hotel-reviews.csv"))
-                .delimited()
-                .names(new String[]{"id", "address", "city", "country", "name"})
+                .delimited().names(new String[]{"id", "address", "city", "country", "name"})
                 .fieldSetMapper(new BeanWrapperFieldSetMapper<Hotel>() {{
                     setTargetType(Hotel.class);
                 }})
