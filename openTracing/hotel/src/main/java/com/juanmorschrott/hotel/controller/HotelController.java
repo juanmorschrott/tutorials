@@ -48,7 +48,7 @@ public class HotelController {
 
         Page<Hotel> hotels = hotelRepository.findByCity(city, firstPage);
 
-        if (!hotels.isEmpty()) {
+        if (hotels.getTotalPages() > 0) {
             return new ResponseEntity<>(hotels.getContent(), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
