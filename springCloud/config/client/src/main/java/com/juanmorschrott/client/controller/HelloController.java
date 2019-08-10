@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class HelloController {
 
-    @Value("${custom-config.name}")
-    String name = "World";
+    @Value("${custom.name}")
+    String customName = "World";
 
     @GetMapping
     public String hello() {
-        return "Hello " + name;
+        return "Hello " + customName;
     }
 
 }
