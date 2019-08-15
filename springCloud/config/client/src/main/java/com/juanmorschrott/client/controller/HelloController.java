@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @Value("${custom.name}")
-    String customName = "World";
+    String customName;
 
     @GetMapping
     public String hello() {
