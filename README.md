@@ -1,2 +1,2 @@
 # tutorials
-Simple blog linked tutorials on http://juanmorschrott.com
+Simple blog linked tutorials on https://backendjungle.home.blog/
